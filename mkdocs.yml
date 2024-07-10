@@ -1,0 +1,15 @@
+site_name: Avikon03M docs
+
+# theme: material
+# theme: bootstrap
+# theme: bootstrap4
+# theme: gitbook
+theme: readthedocs
+# theme: bootstrap386
+# theme: terminal
+# theme: cluster
+
+plugins:
+    - plantuml:
+        puml_url: https://www.plantuml.com/plantuml/
+        puml_keyword: plantuml
