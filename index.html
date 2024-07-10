@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Avikon03M docs</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u041f\u0440\u043e\u0435\u043a\u0442 Avikon03M";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Avikon03M docs
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Проект Avikon03M</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_1">Описание файлов входящих в состав поставки комплекса</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_2">Схема взаимодействия компонентов комплекса</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">Описание сервисов</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#servicemonitor">ServiceMonitor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#servicedataprovider">ServiceDataProvider</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#serviceregistration">ServiceRegistration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#serviceserialengine">ServiceSerialEngine</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#serviceascan">ServiceAScan</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#servicevideoregistrator">ServiceVideoRegistrator</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">Описание программ</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#atape">ATape</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Avikon03M docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Проект Avikon03M</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="avikon03m">Проект Avikon03M</h1>
+<h2 id="_1">Описание файлов входящих в состав поставки комплекса</h2>
+<table>
+<thead>
+<tr>
+<th>Название</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AmplColor.xml</td>
+<td>настройка преобразования амплитуда-цвет</td>
+</tr>
+<tr>
+<td>atape.cfg</td>
+<td>хранение настроек программы ATape, включая настройки схем прозвучивания</td>
+</tr>
+<tr>
+<td><a href="#atape">ATape_new.exe</a></td>
+<td>главная программа управления комплексом (заведение регистрации, шифровка данных)</td>
+</tr>
+<tr>
+<td>ATapeCfg.exe</td>
+<td>программа настройки путевой части и параметров ЕКАСУИ</td>
+</tr>
+<tr>
+<td>ATapeXP_Setup_*</td>
+<td>маркер инсталляции</td>
+</tr>
+<tr>
+<td>AutoKMbeatGPS.exe</td>
+<td>программа автоматических отбоев КМ столбов по GPS</td>
+</tr>
+<tr>
+<td>AvikonClient.exe</td>
+<td>программа управления комплексом по протоколу ПУСК</td>
+</tr>
+<tr>
+<td>AvikonVideoPlayer.exe</td>
+<td>программа автономного просмотра видеоданных</td>
+</tr>
+<tr>
+<td>CorrectWheelConstByGps.exe</td>
+<td>программа подстройки константы колеса по данным GPS</td>
+</tr>
+<tr>
+<td>EDAC.xml</td>
+<td>файл настроек программного ВРЧ</td>
+</tr>
+<tr>
+<td>ekasui.cfg</td>
+<td>файл настроек ЕКАСУИ</td>
+</tr>
+<tr>
+<td>GetFilesDescription.exe</td>
+<td>утилита сбора версий файлом для формирования отчета об ошибках</td>
+</tr>
+<tr>
+<td>ImageProcessing.dll</td>
+<td>библиотека обработки видеоданных</td>
+</tr>
+<tr>
+<td>import.*.cfg</td>
+<td>файлы расширения контекстного меню ATape</td>
+</tr>
+<tr>
+<td>IPathGen.exe</td>
+<td>утилита формирования файла путейской координаты по различным источникам</td>
+</tr>
+<tr>
+<td>MakeAtapeCfg.exe</td>
+<td>утилита первоначальной настройки atape.cfg и preference.cfg</td>
+</tr>
+<tr>
+<td>MakeFragment.exe</td>
+<td>утилита формирования вырезок проездов</td>
+</tr>
+<tr>
+<td>Plugins.cfg</td>
+<td>описание и настройки плагинов обработки данных</td>
+</tr>
+<tr>
+<td>preferences.cfg</td>
+<td>настройки программы ATape</td>
+</tr>
+<tr>
+<td>ShowDataInfo.exe</td>
+<td>утилита "Информационная панель БПД"</td>
+</tr>
+<tr>
+<td>SpecUserMark.xml</td>
+<td>описание типов специальных пользовательских отметок</td>
+</tr>
+<tr>
+<td>SpecUserMarkFilter.xml</td>
+<td>настройки фильтрации специальных пользовательских отметок</td>
+</tr>
+<tr>
+<td>SumFilter*.xml</td>
+<td>настройки фильтрации специальных пользовательских отметок</td>
+</tr>
+<tr>
+<td>tooltips.xml</td>
+<td>строки всплывающих подсказок</td>
+</tr>
+<tr>
+<td>TuneCanBeRegistrator.exe</td>
+<td>утилита настройки видимости схем прозвучивания</td>
+</tr>
+<tr>
+<td>DataDriver/*</td>
+<td>драйверы данных и из настройки</td>
+</tr>
+<tr>
+<td>PLDLoader/*</td>
+<td>утилита для отладки МВ</td>
+</tr>
+<tr>
+<td>Plugin/*</td>
+<td>плагины обработки данных</td>
+</tr>
+<tr>
+<td>Scripts/*</td>
+<td>скрипты построения отчетов, формирования панели отметок и внешних объектов</td>
+</tr>
+<tr>
+<td>Services/AvikonSvc.exe</td>
+<td>запуск сервисов</td>
+</tr>
+<tr>
+<td>Services/ServiceAScan.dll</td>
+<td>сервис рассылки А-сканов</td>
+</tr>
+<tr>
+<td><a href="#servicedataprovider">Services/ServiceDataProvider.dll</a></td>
+<td>сервис взаимодействия с МВ</td>
+</tr>
+<tr>
+<td><a href="#servicemonitor">Services/ServiceMonitor.dll</a></td>
+<td>сервис построения конфигураций на основе обнаруженных компонентов</td>
+</tr>
+<tr>
+<td><a href="#serviceregistration">Services/ServiceRegistration.dll</a></td>
+<td>сервис записи данных</td>
+</tr>
+<tr>
+<td><a href="#serviceserialengine">Services/ServiceSerialEngine.dll</a></td>
+<td>сервис управления стойкой</td>
+</tr>
+<tr>
+<td>Services/ADSP/*</td>
+<td>файлы для работы МВ</td>
+</tr>
+<tr>
+<td>Services/Config/EtherChannelDesc.xml</td>
+<td>описание распределения данных в пакетах от ВМ</td>
+</tr>
+<tr>
+<td>Services/Config/SE_SCRIPT_*.xml</td>
+<td>описание команд управления светом камер</td>
+</tr>
+<tr>
+<td>Services/Config/SerialEngineConfig.xml</td>
+<td>описание команд управления стойкой</td>
+</tr>
+<tr>
+<td>Services/Config/SerialEngineScript.lua</td>
+<td>описание команд управления стойкой</td>
+</tr>
+<tr>
+<td>Services/Config/SerialEngineScript.xml</td>
+<td>настройка канала управления стойкой</td>
+</tr>
+<tr>
+<td>Services/Config/services-config.xml</td>
+<td>описание конфигураций комплекса</td>
+</tr>
+<tr>
+<td>Telegrams/*</td>
+<td>шаблоны формирования отчетных форм</td>
+</tr>
+<tr>
+<td><a href="#servicevideoregistrator">VideoServices/ServiceVideoRegistrator.dll</a></td>
+<td>сервис видео-данных (получение, запись, выдача)</td>
+</tr>
+<tr>
+<td>VideoServices/Config/video-config.xml</td>
+<td>описание настроек видео каналов</td>
+</tr>
+<tr>
+<td>ViewsDescription/Data_Default.xml</td>
+<td>настройки расположения представления данных</td>
+</tr>
+<tr>
+<td>ViewsDescription/VideoComp_*.xml</td>
+<td>настройки режимов отображения видео</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">Схема взаимодействия компонентов комплекса</h2>
+<p>Основная задача комплекса: сбор и отображение данных УЗ и магнитного канала, а так же видео данных.</p>
+<div class="puml"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="412px" preserveAspectRatio="true" style="background: #ffffff" version="1.1" viewBox="0 0 642 412" width="642px" zoomAndPan="magnify"><defs/><g><g id="cluster_Стойка"><polygon fill="none" points="98.67,16,108.67,6,232.67,6,232.67,98.3,222.67,108.3,98.67,108.3,98.67,16" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="222.67" x2="232.67" y1="16" y2="6"/><line style="stroke:#181818;stroke-width:1.0;" x1="98.67" x2="222.67" y1="16" y2="16"/><line style="stroke:#181818;stroke-width:1.0;" x1="222.67" x2="222.67" y1="16" y2="108.3"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="56.7656" x="133.2872" y="31.9951">Стойка</text></g><g id="cluster_SR"><rect fill="none" height="96.3" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;" width="163" x="122.67" y="310.59"/><path d="M280.5587,310.59 L280.5587,319.8869 L270.5587,329.8869 L122.67,329.8869 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="147.8887" x="125.67" y="324.5851">ServiceRegistrator</text></g><g id="elem_VM"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="101.7627" x="114.79" y="46"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="196.5527" y="51"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="194.5527" y="53"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="194.5527" y="57"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61.7627" x="129.79" y="78.9951">МВ 1000</text></g><g id="elem_DATA"><path d="M138.67,355.59 C138.67,345.59 203.672,345.59 203.672,345.59 C203.672,345.59 268.6739,345.59 268.6739,355.59 L268.6739,380.8869 C268.6739,390.8869 203.672,390.8869 203.672,390.8869 C203.672,390.8869 138.67,390.8869 138.67,380.8869 L138.67,355.59 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M138.67,355.59 C138.67,365.59 203.672,365.59 203.672,365.59 C203.672,365.59 268.6739,365.59 268.6739,355.59 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.0039" x="148.67" y="382.5851">файлы данных</text></g><g id="elem_SM"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="144.959" x="251.19" y="46"/><path d="M299.5097,46 L299.5097,51 L292.5097,58 L251.19,58 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104.959" x="266.19" y="78.9951">ServiceMonitor</text></g><g id="elem_SAS"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="135.3545" x="500.99" y="171.3"/><path d="M546.1082,171.3 L546.1082,176.3 L539.1082,183.3 L500.99,183.3 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="95.3545" x="515.99" y="204.2951">ServiceAScan</text></g><g id="elem_SDP"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="183.3633" x="220.99" y="171.3"/><path d="M282.1111,171.3 L282.1111,176.3 L275.1111,183.3 L220.99,183.3 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143.3633" x="235.99" y="204.2951">ServiceDataProvider</text></g><g id="elem_SSE"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="179.3369" x="7" y="171.3"/><path d="M66.779,171.3 L66.779,176.3 L59.779,183.3 L7,183.3 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139.3369" x="22" y="204.2951">ServiceSerialEngine</text></g><g id="elem_ATape"><polygon fill="#F1F1F1" points="395.56,355.09,405.56,345.09,479.768,345.09,479.768,381.3869,469.768,391.3869,395.56,391.3869,395.56,355.09" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="469.768" x2="479.768" y1="355.09" y2="345.09"/><line style="stroke:#181818;stroke-width:0.5;" x1="395.56" x2="469.768" y1="355.09" y2="355.09"/><line style="stroke:#181818;stroke-width:0.5;" x1="469.768" x2="469.768" y1="355.09" y2="391.3869"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44.208" x="410.56" y="378.0851">ATape</text></g><g id="link_VM_SDP"><path d="M192.63,92.76 C219.15,115.01 254.8119,144.9254 281.2819,167.1154 " fill="none" id="VM-to-SDP" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="285.88,170.97,281.5526,162.1227,282.0483,167.7578,276.4132,168.2535,285.88,170.97" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="56.2275" x="249.67" y="137.3669">Ethernet</text></g><g id="link_VM_SSE"><path d="M150.0802,97.996 C137.6302,120.246 121.67,148.78 109.24,170.97 " fill="none" id="VM-backto-SSE" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="153.01,92.76,145.1246,98.6608,150.5685,97.1234,152.1059,102.5673,153.01,92.76" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67.4946" x="136.67" y="137.3669">COM-порт</text></g><g id="link_SDP_SAS"><path d="M404.73,194.44 C436.41,194.44 465.28,194.44 494.69,194.44 " fill="none" id="SDP-to-SAS" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="500.69,194.44,491.69,190.44,495.69,194.44,491.69,198.44,500.69,194.44" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39.8315" x="433.0865" y="172.5069">поток</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="60.6646" x="422.67" y="187.6397">A-сканов</text></g><g id="link_SDP_DATA"><path d="M306.6,217.9 C300.33,238.81 289.26,270.31 273.67,294.59 C261.46,313.61 248.1786,327.8193 233.6486,341.2993 " fill="none" id="SDP-to-DATA" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="229.25,345.38,238.5684,342.1913,232.9155,341.9794,233.1274,336.3265,229.25,345.38" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39.8315" x="319.6297" y="260.6569">поток</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83.751" x="297.67" y="275.7897">координаты</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="64.4922" x="307.2994" y="290.9225">и данных</text></g><g id="link_SSE_DATA"><path d="M89.21,217.79 C83.56,238.91 78.75,270.82 91.67,294.59 C103.84,316.99 120.9451,330.7192 142.5251,342.3192 " fill="none" id="SSE-to-DATA" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="147.81,345.16,141.7766,337.3756,143.4059,342.7927,137.9888,344.422,147.81,345.16" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52.2158" x="92.67" y="268.1569">данные</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30.8813" x="103.3372" y="283.2897">HWS</text></g><g id="link_SDP_ATape"><path d="M355.5,217.99 C367.78,226.04 380.35,236.03 389.67,247.59 C413.27,276.87 425.1292,313.4256 431.4792,339.0956 " fill="none" id="SDP-to-ATape" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="432.92,344.92,434.6418,335.2228,431.7193,340.0663,426.8758,337.1439,432.92,344.92" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39.8315" x="438.6297" y="260.6569">поток</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83.751" x="416.67" y="275.7897">координаты</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="64.4922" x="426.2994" y="290.9225">и данных</text></g><g id="link_SAS_ATape"><path d="M556.94,218.05 C545.73,238.79 527.77,269.94 508.67,294.59 C494.74,312.58 481.1553,326.742 466.8053,340.472 " fill="none" id="SAS-to-ATape" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="462.47,344.62,471.7382,341.2882,466.0827,341.1634,466.2076,335.5079,462.47,344.62" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39.8315" x="550.0865" y="268.1569">поток</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="60.6646" x="539.67" y="283.2897">A-сканов</text></g><g id="link_SSE_ATape"><path d="M125.7628,222.0205 C135.0328,230.9005 141.06,237.29 149.67,247.59 C165.86,266.99 159.8,281.92 181.67,294.59 C201.53,306.11 262.36,297.17 284.67,302.59 C323.47,312.03 359.6792,327.5457 389.6992,342.2157 " fill="none" id="SSE-ATape" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="121.43,217.87,125.1622,226.9843,125.0407,221.3288,130.6962,221.2072,121.43,217.87" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="395.09,344.85,388.7601,337.3047,390.5977,342.6547,385.2476,344.4924,395.09,344.85" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="71.6587" x="188.3067" y="268.1569">настройка</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="82.9321" x="182.67" y="283.2897">аппаратуры</text></g></g></svg></div>
+
+<h2 id="_3">Описание сервисов</h2>
+<h3 id="servicemonitor">ServiceMonitor</h3>
+<p>Служба Мониторинга Топологий.</p>
+<ul>
+<li>Следит за сервисами, запущенными на локальном компьютере,</li>
+<li>обменивается этим списком с сервисМониторами, запущенными на других компьютерах,</li>
+<li>раздает конфигурацию комплекса,</li>
+<li>управляет глобальным состоянием комплекса (параметры регистрации).</li>
+</ul>
+<h3 id="servicedataprovider">ServiceDataProvider</h3>
+<p>Сервис дата-провайдер.</p>
+<p>Служба взаимодействия c <code>МВ 1000</code>. Осуществляет:</p>
+<ul>
+<li>загрузку МВ,</li>
+<li>восстановление параметров МВ после перезапуска стойки,</li>
+<li>загрузку в МВ параметров регистрации,</li>
+<li>установку параметров ВМ специфичных для схем прозвучивания,</li>
+<li>чтение данных УЗ и магнитного каналов из Ethernet пакетов и упаковку их в блоки,</li>
+<li>трансляцию А-Сканов в ServiceAScan.</li>
+</ul>
+<h3 id="serviceregistration">ServiceRegistration</h3>
+<p>Служба Регистрации.</p>
+<p>При старте регистрации получает список источников данных, подключается к ним и сохраняет полученные данные на диск.</p>
+<p>В частности:</p>
+<ul>
+<li>паспорт данных,</li>
+<li>УЗ и магнитные каналы,</li>
+<li>положения отбоев КМ столбов</li>
+<li>настройки аппаратуры,</li>
+<li>GPS и температуру,</li>
+<li>отметки пользователя,</li>
+<li>секундные метки,</li>
+<li>специальные пользовательские отметки,</li>
+<li>различные индексы, для облегчения позиционирования по данным.</li>
+</ul>
+<h3 id="serviceserialengine">ServiceSerialEngine</h3>
+<p>Служба Управления Настройками Аппаратуры.</p>
+<ul>
+<li>Принимает команды управления стойкой,</li>
+<li>на основе скрипта <code>SerialEngineScript.xml</code> формирует последовательности байт, которые</li>
+<li>отправляться в стойку через COM-порт,</li>
+<li>ответ вычитывается, разбирается и форматируется в специальный XML, который</li>
+<li>рассылается специальным широковещательным потоком.</li>
+</ul>
+<p>В основном с сервисом взаимодействуют две программы: <code>ATape</code> и <code>CrateTuner</code>.</p>
+<p>На компьютерах, предназначенных для записи видеоданных сервис используется для управления фарами.</p>
+<h3 id="serviceascan">ServiceAScan</h3>
+<p>Служба Раздачи Потоков АСкан.</p>
+<p>Ретрансляция, для снижения нагрузки, потока А-сканов с ServiceDataProvider потребителям.</p>
+<h3 id="servicevideoregistrator">ServiceVideoRegistrator</h3>
+<p>Служба Регистрации Видео.</p>
+<ul>
+<li>Инициализирует и управляет Камерами,</li>
+<li>собирает и обрабатывает данные с камер,</li>
+<li>транслирует живые видео данные,</li>
+<li>сохраняет данные на диск,</li>
+<li>отдает записанные данные для просмотра.</li>
+</ul>
+<h2 id="_4">Описание программ</h2>
+<h3 id="atape">ATape</h3>
+<p>Основная программа управления комплексом. Позволяет:</p>
+<ul>
+<li>запускать, останавливать, следить за статусом регистрации,</li>
+<li>следить за живыми данными (А-сканы, Видео),</li>
+<li>управлять настройками аппаратуры,</li>
+<li>контролировать качество записи в регистрации.</li>
+</ul>
+<p>А так же:</p>
+<ul>
+<li>Просматривать записанные данные для поиска дефектов,</li>
+<li>устанавливать отметки записной книжки,</li>
+<li>просматривать результаты автоматической обработки УЗ и видео,</li>
+<li>формировать отчеты и результирующие формы.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.0
+Build Date UTC : 2024-07-10 13:05:59.171661+00:00
+-->
